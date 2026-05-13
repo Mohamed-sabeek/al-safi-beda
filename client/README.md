@@ -1,16 +1,157 @@
-# React + Vite
+# Al Safi Beda 🍴
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium modern responsive landing page website for Al Safi Beda, a homemade food brand specializing in traditional homemade beda varieties and snacks.
 
-Currently, two official plugins are available:
+Built using React.js + Vite + Tailwind CSS, the website focuses on showcasing authentic homemade food, menu items, contact details, and WhatsApp ordering in a clean and professional UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌟 Features
+- Premium modern landing page UI
+- Fully responsive design
+- Smooth scrolling animations
+- Green & white homemade food theme
+- Beautiful menu showcase section
+- WhatsApp direct ordering
+- Mobile-first design
+- Sticky responsive navbar
+- Animated sections using Framer Motion
+- Gallery section
+- Customer reviews section
+- Floating WhatsApp button
+- Click-to-call contact buttons
+- Fast optimized frontend-only architecture
 
-## React Compiler
+## 🛠️ Tech Stack
+| Technology | Usage |
+| :--- | :--- |
+| **React.js** | Frontend Framework |
+| **Vite** | Build Tool |
+| **Tailwind CSS** | Styling |
+| **Framer Motion** | Animations |
+| **React Icons** | Icons |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🎨 Theme Colors
+| Color | Hex |
+| :--- | :--- |
+| **Primary Green** | `#0B6B2F` |
+| **Golden Yellow** | `#FFD54F` |
+| **White** | `#FFFFFF` |
+| **Soft Green Background** | `#F4FFF4` |
+| **Accent Red** | `#D62828` |
 
-## Expanding the ESLint configuration
+## 📂 Project Structure
+```
+src/
+│
+├── assets/          # Images & logo
+├── components/      # Reusable components
+├── sections/        # Website sections
+├── App.jsx
+├── main.jsx
+│
+public/
+│
+package.json
+vite.config.js
+tailwind.config.js
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📱 Website Sections
+- Navbar
+- Hero Section
+- About Section
+- Menu Section
+- Why Choose Us
+- Gallery
+- Reviews
+- Contact Section
+- Footer
+
+## 🍽️ Menu Items
+- Mitha Beda
+- Gothuma Beda
+- Homemade Special Beda
+- Traditional Snacks
+
+## 📞 Contact Details
+
+### 📱 Phone Numbers:
+- 96774 69736
+- 81486 82249
+
+### 💬 WhatsApp Order:
+- [https://wa.me/919677469736](https://wa.me/919677469736)
+
+## 🚀 Installation & Setup
+1️⃣ **Clone Repository**
+```bash
+git clone https://github.com/your-username/al-safi-beda.git
+```
+2️⃣ **Navigate to Project**
+```bash
+cd al-safi-beda
+```
+3️⃣ **Install Dependencies**
+```bash
+npm install
+```
+4️⃣ **Start Development Server**
+```bash
+npm run dev
+```
+
+## 🏗️ Build For Production
+```bash
+npm run build
+```
+
+## 👀 Preview Production Build
+```bash
+npm run preview
+```
+
+## 🌐 Deployment
+The project is deployed using **Vercel**.
+
+### Deploy Steps
+1. Push code to GitHub
+2. Import repository into Vercel
+3. Configure:
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+4. Click **Deploy** 🚀
+
+## ⚡ Performance Optimizations
+- **WebP Image Support**: All images converted to high-performance WebP format.
+- **Lazy-loaded images**: Using `loading="lazy"` and `decoding="async"` for below-the-fold content.
+- **Optimized animations**: Simplified motion effects for smooth 60fps scrolling on mobile.
+- **Responsive image rendering**: Preventing layout shifts (CLS) with fixed dimensions.
+- **Lightweight architecture**: Fast optimized frontend-only logic.
+- **Mobile-first design**: Tailored for smooth interaction on touch devices.
+
+## 📸 Branding
+The UI and branding are inspired by:
+- Official Al Safi Beda logo
+- Homemade food menu poster
+- Traditional homemade food aesthetics
+
+## 🎯 Project Goal
+The main objective of this website is to:
+- Showcase authentic homemade food
+- Build customer trust
+- Display menu items professionally
+- Enable direct WhatsApp ordering
+- Create a premium homemade food brand presence online
+
+## 💡 Future Improvements
+- Online ordering system
+- Admin dashboard
+- Dynamic menu management
+- Payment gateway integration
+- Customer feedback system
+- Dark mode support
+
+## 👨‍💻 Developed By
+**Mohamed-Sabeek**
+
+## 📄 License
+This project is for educational and business showcase purposes.
