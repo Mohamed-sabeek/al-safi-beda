@@ -111,25 +111,22 @@ const Menu = () => {
           </div>
         </div>
 
-        <motion.div 
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10"
-        >
-          <AnimatePresence mode='popLayout'>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+          <AnimatePresence mode='wait'>
             {filteredItems.map((item) => (
               <motion.div
                 key={item.id}
-                layout
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className="bg-white rounded-[2rem] overflow-hidden shadow-lg border border-gray-50 group hover:-translate-y-2 lg:hover:shadow-2xl transition-all duration-300 will-change-transform"
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+                className="bg-white rounded-[2rem] overflow-hidden shadow-lg border border-gray-50 group hover:-translate-y-2 lg:hover:shadow-2xl transition-all duration-300 will-change-[opacity,transform]"
               >
                 <div className="relative h-64 md:h-72 overflow-hidden bg-gray-100">
                   <img 
                     src={item.image} 
                     alt={item.name} 
-                    className="w-full h-full object-cover transition-transform duration-500 lg:group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-300 lg:group-hover:scale-105"
                     loading="lazy"
                     decoding="async"
                     width="400"
@@ -154,7 +151,7 @@ const Menu = () => {
               </motion.div>
             ))}
           </AnimatePresence>
-        </motion.div>
+        </div>
       </div>
 
       {/* Decorative patterns */}

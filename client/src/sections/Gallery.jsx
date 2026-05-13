@@ -36,9 +36,9 @@ const Gallery = () => {
               key={index}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.3 }}
               viewport={{ once: true }}
-              className={`relative overflow-hidden rounded-2xl md:rounded-[2rem] shadow-md group ${img.span} will-change-transform`}
+              className={`relative overflow-hidden rounded-2xl md:rounded-[2rem] shadow-md group ${img.span} will-change-[opacity]`}
             >
               <img 
                 src={img.src} 
