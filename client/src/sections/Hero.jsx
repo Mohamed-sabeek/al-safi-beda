@@ -38,11 +38,12 @@ const Hero = () => {
         />
       ))}
 
-      <div className="relative z-20 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative z-20 max-w-7xl mx-auto px-6 text-center">
         <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
+          className="flex flex-col items-center"
         >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -62,11 +63,11 @@ const Hero = () => {
             <span className="text-secondary">Homemade</span> Taste
           </h1>
           
-          <p className="text-white/80 text-xl md:text-2xl mb-12 max-w-xl leading-relaxed">
+          <p className="text-white/80 text-xl md:text-2xl mb-12 max-w-2xl leading-relaxed">
             Freshly prepared homemade beda with traditional flavor, extreme hygiene, and premium quality ingredients.
           </p>
 
-          <div className="flex flex-wrap gap-6">
+          <div className="flex flex-wrap justify-center gap-10 mt-4">
             <motion.a 
               whileHover={{ scale: 1.05, boxShadow: "0 20px 40px -10px rgba(255, 213, 79, 0.3)" }}
               whileTap={{ scale: 0.95 }}
@@ -87,48 +88,8 @@ const Hero = () => {
             </motion.a>
           </div>
         </motion.div>
-
-        {/* Hero Visual Section */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8, rotate: 10 }}
-          animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          className="hidden lg:block relative"
-        >
-          <div className="relative z-10 p-4 bg-white/10 backdrop-blur-md rounded-[3rem] border border-white/20 shadow-2xl overflow-hidden group">
-            <motion.img 
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=90" 
-              alt="Premium Beda" 
-              className="w-full h-auto rounded-[2.5rem] shadow-2xl transform group-hover:scale-105 transition-transform duration-700"
-            />
-            {/* Overlay badge */}
-            <div className="absolute bottom-10 right-10 bg-white p-4 rounded-2xl shadow-2xl flex items-center gap-3">
-              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-secondary font-bold">100%</div>
-              <div>
-                <p className="text-dark font-extrabold text-sm uppercase">Pure Quality</p>
-                <p className="text-gray-500 text-xs">Handmade with care</p>
-              </div>
-            </div>
-          </div>
-          
-          {/* Decorative Elements */}
-          <div className="absolute -top-10 -right-10 w-40 h-40 bg-secondary/30 rounded-full blur-[80px] -z-10"></div>
-          <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-primary/40 rounded-full blur-[100px] -z-10"></div>
-        </motion.div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div 
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 hidden md:block"
-      >
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center p-1">
-          <div className="w-1 h-2 bg-white rounded-full"></div>
-        </div>
-      </motion.div>
     </section>
   );
 };
