@@ -37,15 +37,15 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-start px-4 md:px-0">
           {/* Left: Contact Info */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="space-y-10"
+            className="space-y-8 md:space-y-10"
           >
-            <div className="bg-soft p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] border border-primary/5 space-y-6 md:space-y-8 shadow-xl shadow-primary/5">
+            <div className="bg-soft p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] border border-primary/5 space-y-6 md:space-y-8 shadow-lg">
               <div className="flex items-center gap-4 md:gap-6 group">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-primary text-white rounded-xl md:rounded-2xl flex items-center justify-center text-xl md:text-2xl shadow-xl shadow-primary/30 group-hover:rotate-12 transition-all">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-primary text-white rounded-xl md:rounded-2xl flex items-center justify-center text-xl md:text-2xl shadow-md lg:group-hover:scale-105 transition-transform">
                   <FaPhoneAlt />
                 </div>
                 <div>
@@ -59,7 +59,7 @@ const Contact = () => {
               </div>
 
               <div className="flex items-center gap-4 md:gap-6 group">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-green-500 text-white rounded-xl md:rounded-2xl flex items-center justify-center text-2xl md:text-3xl shadow-xl shadow-green-500/30 group-hover:rotate-12 transition-all">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-green-500 text-white rounded-xl md:rounded-2xl flex items-center justify-center text-2xl md:text-3xl shadow-md lg:group-hover:scale-105 transition-transform">
                   <FaWhatsapp />
                 </div>
                 <div>
@@ -69,7 +69,7 @@ const Contact = () => {
               </div>
 
               <div className="flex items-center gap-4 md:gap-6 group">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-accent text-white rounded-xl md:rounded-2xl flex items-center justify-center text-2xl md:text-3xl shadow-xl shadow-accent/30 group-hover:rotate-12 transition-all">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-accent text-white rounded-xl md:rounded-2xl flex items-center justify-center text-2xl md:text-3xl shadow-md lg:group-hover:scale-105 transition-transform">
                   <FaInstagram />
                 </div>
                 <div>
@@ -79,7 +79,7 @@ const Contact = () => {
               </div>
 
               <div className="flex items-center gap-4 md:gap-6 group">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-secondary text-primary rounded-xl md:rounded-2xl flex items-center justify-center text-2xl md:text-3xl shadow-xl shadow-secondary/30 group-hover:rotate-12 transition-all">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-secondary text-primary rounded-xl md:rounded-2xl flex items-center justify-center text-2xl md:text-3xl shadow-md lg:group-hover:scale-105 transition-transform">
                   <FaClock />
                 </div>
                 <div>
@@ -89,8 +89,8 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Google Maps Embed */}
-            <div className="rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl h-56 md:h-64 border-4 md:border-8 border-white bg-gray-100">
+            {/* Google Maps Embed - Optimized */}
+            <div className="rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-lg h-56 md:h-64 border-4 md:border-8 border-white bg-gray-100">
               <iframe 
                 title="Location Map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125322.44173133188!2d76.88483284000307!3d11.01201452399996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f973901%3A0x2670dd4609727419!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1715512000000!5m2!1sen!2sin" 
@@ -105,11 +105,11 @@ const Contact = () => {
 
           {/* Right: Contact Form */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
-            className="bg-white p-6 md:p-12 rounded-[2.5rem] md:rounded-[3rem] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.1)] border border-gray-100 mt-10 lg:mt-0"
+            className="bg-white p-6 md:p-12 rounded-[2.5rem] md:rounded-[3rem] shadow-xl border border-gray-100 mt-10 lg:mt-0"
           >
             <h3 className="text-xl md:text-2xl font-bold text-dark mb-6 md:mb-8 text-center md:text-left">Send us a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
@@ -121,7 +121,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="e.g. Mohamed Sabeek H" 
-                  className="w-full px-5 md:px-6 py-3 md:py-4 bg-soft border border-gray-100 rounded-xl md:rounded-2xl focus:outline-none focus:ring-4 focus:ring-primary/5 focus:border-primary transition-all text-dark font-medium text-sm md:text-base"
+                  className="w-full px-5 md:px-6 py-3 md:py-4 bg-soft border border-gray-100 rounded-xl md:rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-dark font-medium text-sm md:text-base"
                   required
                 />
               </div>
@@ -133,7 +133,7 @@ const Contact = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="e.g. +91 98765 43210" 
-                  className="w-full px-5 md:px-6 py-3 md:py-4 bg-soft border border-gray-100 rounded-xl md:rounded-2xl focus:outline-none focus:ring-4 focus:ring-primary/5 focus:border-primary transition-all text-dark font-medium text-sm md:text-base"
+                  className="w-full px-5 md:px-6 py-3 md:py-4 bg-soft border border-gray-100 rounded-xl md:rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-dark font-medium text-sm md:text-base"
                   required
                 />
               </div>
@@ -145,14 +145,14 @@ const Contact = () => {
                   onChange={handleChange}
                   rows="4" 
                   placeholder="Tell us what you'd like to order..." 
-                  className="w-full px-5 md:px-6 py-3 md:py-4 bg-soft border border-gray-100 rounded-xl md:rounded-2xl focus:outline-none focus:ring-4 focus:ring-primary/5 focus:border-primary transition-all text-dark font-medium resize-none text-sm md:text-base"
+                  className="w-full px-5 md:px-6 py-3 md:py-4 bg-soft border border-gray-100 rounded-xl md:rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-dark font-medium resize-none text-sm md:text-base"
                   required
                 ></textarea>
               </div>
               
               <button 
                 type="submit" 
-                className="w-full btn-primary justify-center py-4 md:py-5 text-lg md:text-xl font-bold rounded-xl md:rounded-2xl shadow-2xl shadow-primary/30 relative overflow-hidden group"
+                className="w-full btn-primary justify-center py-4 md:py-5 text-lg md:text-xl font-bold rounded-xl md:rounded-2xl shadow-lg relative overflow-hidden group active:scale-95 transition-transform"
               >
                 <span className="relative z-10 flex items-center gap-2">
                   {isSubmitted ? 'Sent Successfully!' : 'Send Message'}
@@ -174,9 +174,9 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[120px] -z-10"></div>
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[120px] -z-10"></div>
+      {/* Background decoration - Optimized */}
+      <div className="absolute top-0 right-0 w-80 h-80 bg-primary/5 rounded-full blur-[100px] -z-10"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-secondary/5 rounded-full blur-[100px] -z-10"></div>
     </section>
   );
 };

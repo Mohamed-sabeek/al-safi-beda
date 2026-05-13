@@ -69,37 +69,29 @@ const WhyChooseUs = () => {
           <p className="text-gray-500 max-w-2xl mx-auto text-lg">We combine traditional wisdom with modern standards to give you the best homemade experience.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {reasons.map((reason, index) => (
             <motion.div 
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="group p-10 rounded-[2.5rem] bg-white border border-gray-100 shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 relative overflow-hidden"
+              className="group p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] bg-white border border-gray-100 shadow-lg lg:hover:shadow-xl lg:hover:shadow-primary/5 transition-all duration-300 relative overflow-hidden"
             >
-              {/* Hover Background Gradient */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${reason.color} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-500`}></div>
-              
-              <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-8 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 ${reason.lightColor} group-hover:bg-gradient-to-br group-hover:${reason.color} group-hover:text-white group-hover:shadow-lg`}>
+              <div className={`w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mb-6 md:mb-8 transition-transform duration-300 lg:group-hover:scale-105 ${reason.lightColor}`}>
                 {reason.icon}
               </div>
               
-              <h3 className="text-2xl font-bold text-dark mb-4 group-hover:text-primary transition-colors">{reason.title}</h3>
-              <p className="text-gray-500 leading-relaxed text-base group-hover:text-gray-700 transition-colors">{reason.desc}</p>
-              
-              {/* Bottom Decoration */}
-              <div className="absolute bottom-4 right-8 text-6xl font-black text-gray-50 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 select-none">
-                0{index + 1}
-              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-dark mb-3 md:mb-4 lg:group-hover:text-primary transition-colors">{reason.title}</h3>
+              <p className="text-gray-500 leading-relaxed text-sm md:text-base">{reason.desc}</p>
             </motion.div>
           ))}
         </div>
       </div>
 
-      {/* Decorative Blur Spheres */}
-      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -z-10"></div>
+      {/* Decorative Blur Spheres - Optimized */}
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-80 h-80 bg-primary/5 rounded-full blur-[80px] -z-10"></div>
     </section>
   );
 };

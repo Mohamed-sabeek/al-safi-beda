@@ -2,9 +2,11 @@ import React, { useEffect, Suspense, lazy } from 'react';
 import { motion } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
 
-// Lazy load sections for performance
-const Navbar = lazy(() => import('./sections/Navbar'));
-const Hero = lazy(() => import('./sections/Hero'));
+// Direct imports for above-the-fold content
+import Navbar from './sections/Navbar';
+import Hero from './sections/Hero';
+
+// Lazy load below-the-fold sections for performance
 const About = lazy(() => import('./sections/About'));
 const Menu = lazy(() => import('./sections/Menu'));
 const WhyChooseUs = lazy(() => import('./sections/WhyChooseUs'));
@@ -15,20 +17,16 @@ const Footer = lazy(() => import('./sections/Footer'));
 
 const Loading = () => (
   <div className="h-screen w-full flex items-center justify-center bg-primary">
-    <motion.div 
-      animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
-      transition={{ duration: 2, repeat: Infinity }}
-      className="w-16 h-16 border-4 border-secondary border-t-transparent rounded-full"
-    />
+    <div className="w-12 h-12 border-4 border-secondary border-t-transparent rounded-full animate-spin" />
   </div>
 );
 
 function App() {
   return (
     <div className="bg-soft min-h-screen selection:bg-primary selection:text-secondary">
+      <Navbar />
+      <Hero />
       <Suspense fallback={<Loading />}>
-        <Navbar />
-        <Hero />
         <About />
         <Menu />
         <WhyChooseUs />

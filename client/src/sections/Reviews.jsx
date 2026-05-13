@@ -7,7 +7,7 @@ const Reviews = () => {
     { 
       name: "Suresh Kumar", 
       role: "Regular Customer", 
-      text: "The Mitha Beda is absolutely delicious. It tastes just like how my grandmother used to make it. Highly recommended for anyone looking for authentic taste!", 
+      text: "The Maitha Beda is absolutely delicious. It tastes just like how my grandmother used to make it. Highly recommended for anyone looking for authentic taste!", 
       rating: 5,
       image: "https://randomuser.me/api/portraits/men/32.jpg"
     },
@@ -43,38 +43,39 @@ const Reviews = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
           {testimonials.map((review, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.9, y: 30 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ delay: index * 0.2, duration: 0.6 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="p-10 rounded-[3rem] bg-white border border-gray-100 shadow-2xl shadow-gray-200/50 relative group hover:-translate-y-4 transition-all duration-500"
+              className="p-8 md:p-10 rounded-[2.5rem] md:rounded-[3rem] bg-white border border-gray-100 shadow-lg relative lg:hover:-translate-y-2 lg:hover:shadow-xl transition-all duration-300"
             >
-              <div className="absolute -top-6 left-10">
-                <div className="w-16 h-16 rounded-2xl bg-primary text-white flex items-center justify-center text-3xl shadow-xl shadow-primary/30">
+              <div className="absolute -top-5 left-8 md:left-10">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-primary text-white flex items-center justify-center text-2xl md:text-3xl shadow-lg">
                   <FaQuoteLeft />
                 </div>
               </div>
               
-              <div className="mb-8 pt-6">
+              <div className="mb-6 md:mb-8 pt-4 md:pt-6">
                 <div className="flex gap-1 text-secondary mb-4">
-                  {[...Array(review.rating)].map((_, i) => <FaStar key={i} size={16} />)}
+                  {[...Array(review.rating)].map((_, i) => <FaStar key={i} size={14} />)}
                 </div>
-                <p className="text-gray-600 text-lg italic leading-relaxed">"{review.text}"</p>
+                <p className="text-gray-600 text-base md:text-lg italic leading-relaxed">"{review.text}"</p>
               </div>
 
-              <div className="flex items-center gap-4 border-t border-gray-100 pt-8">
+              <div className="flex items-center gap-4 border-t border-gray-100 pt-6 md:pt-8">
                 <img 
                   src={review.image} 
                   alt={review.name} 
-                  className="w-14 h-14 rounded-full object-cover border-2 border-primary/10 p-1"
+                  className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-primary/10 p-1"
+                  loading="lazy"
                 />
                 <div>
-                  <h4 className="font-extrabold text-dark text-lg">{review.name}</h4>
-                  <p className="text-primary text-sm font-bold uppercase tracking-wider">{review.role}</p>
+                  <h4 className="font-bold text-dark text-base md:text-lg">{review.name}</h4>
+                  <p className="text-primary text-xs font-bold uppercase tracking-wider">{review.role}</p>
                 </div>
               </div>
             </motion.div>
@@ -82,8 +83,8 @@ const Reviews = () => {
         </div>
       </div>
 
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[150px] -z-10"></div>
+      {/* Background decoration - Optimized */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-[100px] -z-10"></div>
     </section>
   );
 };
