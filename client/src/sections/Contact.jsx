@@ -1,24 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { FaPhoneAlt, FaWhatsapp, FaInstagram, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', phone: '', message: '' });
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.id]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Simulate form submission
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: '', phone: '', message: '' });
-    }, 3000);
-  };
 
   return (
     <section id="contact" className="section-padding bg-white relative overflow-hidden">
@@ -34,7 +19,7 @@ const Contact = () => {
           <p className="text-gray-500 max-w-2xl mx-auto">Have questions or want to place a custom order? Reach out to us via call or WhatsApp.</p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-start px-4 md:px-0">
+        <div className="max-w-4xl mx-auto px-4 md:px-0">
           {/* Left: Contact Info */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -53,7 +38,7 @@ const Contact = () => {
                   <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
                     <a href="tel:9677469736" className="text-xl md:text-2xl font-bold text-dark hover:text-primary transition-colors">96774 69736</a>
                     <span className="hidden sm:block text-gray-300">|</span>
-                    <a href="tel:8148682249" className="text-xl md:text-2xl font-bold text-dark hover:text-primary transition-colors">81486 82249</a>
+                    <a href="tel:9629561173" className="text-xl md:text-2xl font-bold text-dark hover:text-primary transition-colors">96295 61173</a>
                   </div>
                 </div>
               </div>
@@ -101,75 +86,6 @@ const Contact = () => {
                 loading="lazy"
               ></iframe>
             </div>
-          </motion.div>
-
-          {/* Right: Contact Form */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="bg-white p-6 md:p-12 rounded-[2.5rem] md:rounded-[3rem] shadow-xl border border-gray-100 mt-10 lg:mt-0"
-          >
-            <h3 className="text-xl md:text-2xl font-bold text-dark mb-6 md:mb-8 text-center md:text-left">Send us a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
-              <div className="space-y-2">
-                <label htmlFor="name" className="text-xs md:text-sm font-bold text-gray-700 ml-1">Your Full Name</label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="e.g. Mohamed Sabeek H" 
-                  className="w-full px-5 md:px-6 py-3 md:py-4 bg-soft border border-gray-100 rounded-xl md:rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-dark font-medium text-sm md:text-base"
-                  required
-                />
-              </div>
-              <div className="space-y-2">
-                <label htmlFor="phone" className="text-xs md:text-sm font-bold text-gray-700 ml-1">Phone Number</label>
-                <input 
-                  type="tel" 
-                  id="phone" 
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeholder="e.g. +91 98765 43210" 
-                  className="w-full px-5 md:px-6 py-3 md:py-4 bg-soft border border-gray-100 rounded-xl md:rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-dark font-medium text-sm md:text-base"
-                  required
-                />
-              </div>
-              <div className="space-y-2">
-                <label htmlFor="message" className="text-xs md:text-sm font-bold text-gray-700 ml-1">Your Requirements</label>
-                <textarea 
-                  id="message" 
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows="4" 
-                  placeholder="Tell us what you'd like to order..." 
-                  className="w-full px-5 md:px-6 py-3 md:py-4 bg-soft border border-gray-100 rounded-xl md:rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-dark font-medium resize-none text-sm md:text-base"
-                  required
-                ></textarea>
-              </div>
-              
-              <button 
-                type="submit" 
-                className="w-full btn-primary justify-center py-4 md:py-5 text-lg md:text-xl font-bold rounded-xl md:rounded-2xl shadow-lg relative overflow-hidden group active:scale-95 transition-transform"
-              >
-                <span className="relative z-10 flex items-center gap-2">
-                  {isSubmitted ? 'Sent Successfully!' : 'Send Message'}
-                </span>
-                <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-              </button>
-
-              {isSubmitted && (
-                <motion.div 
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="p-4 bg-primary/10 text-primary font-bold text-center rounded-xl border border-primary/20"
-                >
-                  We'll get back to you shortly!
-                </motion.div>
-              )}
-            </form>
           </motion.div>
         </div>
       </div>

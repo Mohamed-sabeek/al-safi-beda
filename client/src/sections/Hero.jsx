@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaWhatsapp, FaArrowRight } from 'react-icons/fa';
 import logo from '../assets/logo.webp';
+import bgImage from '../assets/bg.webp';
 
 const Hero = () => {
   return (
@@ -11,8 +12,8 @@ const Hero = () => {
         initial={{ scale: 1.02 }}
         animate={{ scale: 1 }}
         transition={{ duration: 3, ease: "easeOut" }}
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-40 will-change-transform"
-        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1604152135912-04a022e23696?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80")' }}
+        className="absolute inset-0 z-0 bg-cover bg-top md:bg-center bg-no-repeat opacity-40 will-change-transform"
+        style={{ backgroundImage: `url(${bgImage})` }}
       />
       
       {/* Gradient Overlays - Optimized */}

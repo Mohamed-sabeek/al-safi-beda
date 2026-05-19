@@ -32,7 +32,6 @@ const Navbar = () => {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Menu', href: '#menu' },
-    { name: 'Gallery', href: '#gallery' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -170,7 +169,10 @@ const Navbar = () => {
                       </div>
                       <div>
                         <p className="text-[10px] text-primary font-bold uppercase mb-0.5">Call Us Now</p>
-                        <a href="tel:9677469736" className="text-lg font-bold text-dark hover:text-primary transition-colors">96774 69736</a>
+                        <div className="flex flex-col">
+                          <a href="tel:9677469736" className="text-lg font-bold text-dark hover:text-primary transition-colors">96774 69736</a>
+                          <a href="tel:9629561173" className="text-lg font-bold text-dark hover:text-primary transition-colors">96295 61173</a>
+                        </div>
                       </div>
                     </div>
                     
@@ -195,7 +197,7 @@ const Navbar = () => {
 
               {/* Social Media Footer */}
               <div className="p-8 bg-soft border-t border-gray-100 flex justify-center gap-6">
-                {['Instagram', 'Facebook', 'Twitter'].map((social) => (
+                {['Instagram'].map((social) => (
                   <a key={social} href="#" className="text-xs font-bold text-gray-400 hover:text-primary transition-colors uppercase tracking-widest">{social}</a>
                 ))}
               </div>

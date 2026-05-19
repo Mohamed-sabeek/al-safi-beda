@@ -10,7 +10,6 @@ import Hero from './sections/Hero';
 const About = lazy(() => import('./sections/About'));
 const Menu = lazy(() => import('./sections/Menu'));
 const WhyChooseUs = lazy(() => import('./sections/WhyChooseUs'));
-const Gallery = lazy(() => import('./sections/Gallery'));
 const Reviews = lazy(() => import('./sections/Reviews'));
 const Contact = lazy(() => import('./sections/Contact'));
 const Footer = lazy(() => import('./sections/Footer'));
@@ -30,7 +29,6 @@ function App() {
         <About />
         <Menu />
         <WhyChooseUs />
-        <Gallery />
         <Reviews />
         <Contact />
         <Footer />
@@ -43,7 +41,7 @@ function App() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         href="https://wa.me/919677469736?text=Hi%20I%20want%20to%20order%20Beda"
-        className="fixed bottom-8 right-8 z-50 bg-green-500 text-white p-5 rounded-full shadow-[0_20px_50px_rgba(34,197,94,0.4)] flex items-center justify-center text-4xl border-4 border-white group"
+        className="fixed bottom-24 md:bottom-10 right-6 md:right-10 z-50 bg-green-500 text-white p-4 md:p-5 rounded-full shadow-[0_20px_50px_rgba(34,197,94,0.4)] flex items-center justify-center text-3xl md:text-4xl border-4 border-white group"
         target="_blank"
         rel="noopener noreferrer"
       >

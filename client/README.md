@@ -14,7 +14,6 @@ Built using React.js + Vite + Tailwind CSS, the website focuses on showcasing au
 - Mobile-first design
 - Sticky responsive navbar
 - Animated sections using Framer Motion
-- Gallery section
 - Customer reviews section
 - Floating WhatsApp button
 - Click-to-call contact buttons
@@ -61,7 +60,6 @@ tailwind.config.js
 - About Section
 - Menu Section
 - Why Choose Us
-- Gallery
 - Reviews
 - Contact Section
 - Footer
@@ -76,7 +74,7 @@ tailwind.config.js
 
 ### 📱 Phone Numbers:
 - 96774 69736
-- 81486 82249
+- 96295 61173
 
 ### 💬 WhatsApp Order:
 - [https://wa.me/919677469736](https://wa.me/919677469736)

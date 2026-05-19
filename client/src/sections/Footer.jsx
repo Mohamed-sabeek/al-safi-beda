@@ -1,4 +1,4 @@
-import { FaWhatsapp, FaInstagram, FaFacebook, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaWhatsapp, FaInstagram, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import logo from '../assets/logo.webp';
 
 const Footer = () => {
@@ -18,7 +18,7 @@ const Footer = () => {
               Bringing authentic homemade flavors to your table. Prepared with love, extreme hygiene, and tradition.
             </p>
             <div className="flex gap-4">
-              {[FaInstagram, FaFacebook, FaWhatsapp].map((Icon, i) => (
+              {[FaInstagram, FaWhatsapp].map((Icon, i) => (
                 <a key={i} href="#" className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-white/5 backdrop-blur-sm flex items-center justify-center border border-white/5 hover:bg-secondary hover:text-primary transition-all duration-300">
                   <Icon size={20} />
                 </a>
@@ -30,7 +30,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg md:text-xl font-bold mb-6 md:mb-8 text-secondary uppercase tracking-widest text-sm md:text-base">Navigation</h4>
             <ul className="space-y-3 md:space-y-4">
-              {['Home', 'About', 'Menu', 'Gallery', 'Contact'].map((link) => (
+              {['Home', 'About', 'Menu', 'Contact'].map((link) => (
                 <li key={link}>
                   <a href={`#${link.toLowerCase()}`} className="text-white/60 hover:text-white transition-colors flex items-center gap-2 group">
                     <span className="w-1.5 h-1.5 bg-secondary rounded-full opacity-0 lg:group-hover:opacity-100 transition-opacity"></span>
@@ -65,7 +65,7 @@ const Footer = () => {
                 <div>
                   <p className="text-[10px] text-white/40 uppercase font-bold mb-0.5">Call Us</p>
                   <p className="font-bold text-sm md:text-base">96774 69736</p>
-                  <p className="font-bold text-sm md:text-base">81486 82249</p>
+                  <p className="font-bold text-sm md:text-base">96295 61173</p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
@@ -82,9 +82,17 @@ const Footer = () => {
         </div>
 
         <div className="pt-10 md:pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-white/40 text-xs md:text-sm font-medium">
+          <p className="text-white/40 text-xs md:text-sm font-medium text-center md:text-left">
             © {new Date().getFullYear()} <span className="text-secondary">Al Safi Beda</span>. All rights reserved.
           </p>
+          <div className="flex items-center gap-3 text-white/40 text-xs md:text-sm font-medium flex-wrap justify-center">
+            <span>Website Support: Mohamed Sabeek</span>
+            <span className="hidden sm:inline">|</span>
+            <a href="tel:6383028607" className="hover:text-white transition-colors">63830 28607</a>
+            <a href="https://wa.me/916383028607?text=Hi%20Mohamed,%20I%20need%20support%20with%20the%20website" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-400 hover:scale-125 transition-all ml-1">
+              <FaWhatsapp size={16} />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

@@ -8,8 +8,8 @@ import parottaImg from '../assets/parotta.webp';
 
 const About = () => {
   const stats = [
-    { label: "Happy Customers", value: "500+", icon: <FaHeart className="text-red-500" /> },
-    { label: "Traditional Recipes", value: "15+", icon: <FaMagic className="text-purple-500" /> },
+    { label: "Happy Customers", value: "1000+", icon: <FaHeart className="text-red-500" /> },
+    { label: "Traditional Recipes", value: "6+", icon: <FaMagic className="text-purple-500" /> },
     { label: "Quality Rating", value: "4.9/5", icon: <FaAward className="text-yellow-500" /> },
     { label: "Homemade Batches", value: "1000+", icon: <FaUserCheck className="text-blue-500" /> },
   ];
@@ -52,7 +52,7 @@ const About = () => {
                   decoding="async"
                 />
                 <div className="bg-primary p-6 md:p-8 rounded-3xl text-white flex flex-col justify-center items-center text-center shadow-lg">
-                  <p className="text-3xl md:text-4xl font-extrabold text-secondary mb-1 md:mb-2">10+</p>
+                  <p className="text-3xl md:text-4xl font-extrabold text-secondary mb-1 md:mb-2">20+</p>
                   <p className="font-bold text-xs md:text-sm uppercase tracking-widest">Years of Tradition</p>
                 </div>
               </div>

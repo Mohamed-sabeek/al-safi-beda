@@ -5,25 +5,28 @@ import { FaStar, FaQuoteLeft } from 'react-icons/fa';
 const Reviews = () => {
   const testimonials = [
     { 
-      name: "Suresh Kumar", 
-      role: "Regular Customer", 
-      text: "The Maitha Beda is absolutely delicious. It tastes just like how my grandmother used to make it. Highly recommended for anyone looking for authentic taste!", 
+      name: "Karthik R.", 
+      location: "Coimbatore", 
+      text: "Romba nalla irukku. The Maitha Beda reminds me of my paati's cooking. Packaging was also super neat and hygienic.", 
       rating: 5,
-      image: "https://randomuser.me/api/portraits/men/32.jpg"
+      initials: "KR",
+      bgColor: "bg-green-100 text-green-700"
     },
     { 
-      name: "Priya Rajan", 
-      role: "Food Blogger", 
-      text: "Amazing quality and hygiene. You can really taste the freshness of the ingredients. The Gothuma Beda is a perfect healthy treat. Loved the packaging too!", 
+      name: "Saranya M.", 
+      location: "Tiruppur", 
+      text: "First time ordering from here, exact homemade taste. Sweetness correct ah irukku. Definitely ordering again!", 
       rating: 5,
-      image: "https://randomuser.me/api/portraits/women/44.jpg"
+      initials: "SM",
+      bgColor: "bg-yellow-100 text-yellow-700"
     },
     { 
-      name: "Arun V.", 
-      role: "Home Chef", 
-      text: "Best homemade snacks in town. The traditional touch is what makes Al Safi stand out. My kids love their special beda varieties. 5 stars all the way!", 
+      name: "Abdul Rahman", 
+      location: "Coimbatore", 
+      text: "Clean and hygienic homemade snacks. En kids ku intha gothuma beda romba pudichirukku. Worth the price.", 
       rating: 5,
-      image: "https://randomuser.me/api/portraits/men/67.jpg"
+      initials: "AR",
+      bgColor: "bg-blue-100 text-blue-700"
     },
   ];
 
@@ -67,15 +70,12 @@ const Reviews = () => {
               </div>
 
               <div className="flex items-center gap-4 border-t border-gray-100 pt-6 md:pt-8">
-                <img 
-                  src={review.image} 
-                  alt={review.name} 
-                  className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-primary/10 p-1"
-                  loading="lazy"
-                />
+                <div className={`w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center font-bold text-lg ${review.bgColor}`}>
+                  {review.initials}
+                </div>
                 <div>
                   <h4 className="font-bold text-dark text-base md:text-lg">{review.name}</h4>
-                  <p className="text-primary text-xs font-bold uppercase tracking-wider">{review.role}</p>
+                  <p className="text-gray-400 text-xs font-bold uppercase tracking-wider">{review.location}</p>
                 </div>
               </div>
             </motion.div>
