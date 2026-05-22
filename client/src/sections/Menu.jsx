@@ -14,6 +14,7 @@ const menuItems = [
     id: 1,
     name: 'Maida Beda (1kg)',
     description: 'Traditional homemade maida beda, soft and layered, prepared with premium quality maida.',
+    note: '1kg ≈ 15 pieces',
     image: maidaBedaImg,
     category: 'Beda',
     price: '₹180'
@@ -22,6 +23,7 @@ const menuItems = [
     id: 2,
     name: 'Godhumai Beda (1kg)',
     description: 'Healthy whole wheat beda, handmade for a traditional authentic taste and soft texture.',
+    note: '1kg ≈ 15 pieces',
     image: godhumaiBedaImg,
     category: 'Beda',
     price: '₹200'
@@ -30,6 +32,7 @@ const menuItems = [
     id: 3,
     name: 'Parotta (1pcs)',
     description: 'Crispy, multi-layered handmade parotta, perfect with any curry or gravy.',
+    note: 'Minimum order: 20 pieces',
     image: parottaImg,
     category: 'Parotta',
     price: '₹20'
@@ -38,6 +41,7 @@ const menuItems = [
     id: 4,
     name: 'Egg Murthabak',
     description: 'Delicious stuffed pancake filled with seasoned eggs and traditional spices.',
+    note: 'Minimum order: 20 pieces',
     image: eggMurtabakImg,
     category: 'Murthabak',
     price: '₹40'
@@ -46,6 +50,7 @@ const menuItems = [
     id: 5,
     name: 'Chicken Murthabak',
     description: 'Premium Murthabak stuffed with succulent minced chicken and aromatic spices.',
+    note: 'Minimum order: 20 pieces',
     image: chickenMurtabakImg,
     category: 'Murthabak',
     price: '₹60'
@@ -54,6 +59,7 @@ const menuItems = [
     id: 6,
     name: 'Mutton Murthabak',
     description: 'Our signature Murthabak filled with rich, spiced minced mutton for a royal taste.',
+    note: 'Minimum order: 20 pieces',
     image: muttonMurtabakImg,
     category: 'Murthabak',
     price: '₹70'
@@ -138,7 +144,10 @@ const Menu = () => {
                 </div>
                 <div className="p-6 md:p-8">
                   <h3 className="text-xl md:text-2xl font-bold text-dark mb-2 group-hover:text-primary transition-colors">{item.name}</h3>
-                  <p className="text-gray-500 text-sm md:text-base mb-6 leading-relaxed line-clamp-2">{item.description}</p>
+                  <p className={`text-gray-500 text-sm md:text-base leading-relaxed line-clamp-2 ${item.note ? 'mb-2' : 'mb-6'}`}>{item.description}</p>
+                  {item.note && (
+                    <p className="text-orange-500 text-[11px] md:text-xs font-bold uppercase tracking-wider mb-4">* {item.note}</p>
+                  )}
                   <a 
                     href={`https://wa.me/919677469736?text=Hi, I want to order ${item.name}`}
                     target="_blank"
