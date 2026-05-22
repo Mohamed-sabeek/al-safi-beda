@@ -74,7 +74,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-[10px] text-white/40 uppercase font-bold mb-0.5">Location</p>
-                  <p className="font-bold text-sm md:text-base">Coimbatore, Tamil Nadu, India</p>
+                  <p className="font-bold text-sm md:text-base">PGP5+GXM Ayikudi, Tamil Nadu, India</p>
                 </div>
               </li>
             </ul>
