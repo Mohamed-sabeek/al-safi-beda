@@ -5,24 +5,24 @@ import { FaStar, FaQuoteLeft } from 'react-icons/fa';
 const Reviews = () => {
   const testimonials = [
     { 
-      name: "Karthik R.", 
-      location: "Mayiladuthurai", 
+      name: "Mohammed Tariq", 
+      location: "Podakkudi", 
       text: "Romba nalla irukku. The Maitha Beda reminds me of my paati's cooking. Packaging was also super neat and hygienic.", 
       rating: 5,
-      initials: "KR",
+      initials: "MT",
       bgColor: "bg-green-100 text-green-700"
     },
     { 
-      name: "Saranya M.", 
-      location: "Sirkazhi", 
+      name: "Ayesha Fathima", 
+      location: "Kootthanalloor", 
       text: "First time ordering from here, exact homemade taste. Sweetness correct ah irukku. Definitely ordering again!", 
       rating: 5,
-      initials: "SM",
+      initials: "AF",
       bgColor: "bg-yellow-100 text-yellow-700"
     },
     { 
       name: "Abdul Rahman", 
-      location: "Nagapattinam", 
+      location: "Marakadai", 
       text: "Clean and hygienic homemade snacks. En kids ku intha gothuma beda romba pudichirukku. Worth the price.", 
       rating: 5,
       initials: "AR",

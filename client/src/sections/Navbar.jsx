@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import { FaWhatsapp } from 'react-icons/fa';
 
-import logo from '../assets/logo.webp';
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,7 +47,7 @@ const Navbar = () => {
             className="flex items-center gap-3 group"
           >
             <img 
-              src={logo} 
+              src="/logo.webp" 
               alt="Al Safi Beda Logo" 
               className={`transition-all duration-300 ${scrolled ? 'h-12' : 'h-14 md:h-20'} w-auto object-contain drop-shadow-sm lg:group-hover:scale-105`} 
               loading="eager"
@@ -125,7 +125,7 @@ const Navbar = () => {
               {/* Header */}
               <div className="flex justify-between items-center p-6 border-b border-gray-50">
                 <div className="flex items-center gap-3">
-                  <img src={logo} alt="Logo" className="h-10 w-auto object-contain" />
+                  <img src="/logo.webp" alt="Al Safi Beda Logo" className="h-10 w-auto object-contain" />
                   <span className="flex flex-col leading-none">
                     <span className="text-xl font-bold text-primary tracking-tight">Al Safi</span>
                     <span className="text-secondary text-[10px] font-bold uppercase tracking-widest">Beda</span>

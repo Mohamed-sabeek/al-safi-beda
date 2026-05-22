@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaHeart, FaShieldAlt, FaClock, FaRupeeSign, FaStar, FaLeaf } from 'react-icons/fa';
+import { FaHeart, FaShieldAlt, FaStar, FaLeaf } from 'react-icons/fa';
 
 const WhyChooseUs = () => {
   const reasons = [

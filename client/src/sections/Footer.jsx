@@ -1,5 +1,4 @@
 import { FaWhatsapp, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
-import logo from '../assets/logo.webp';
 
 const Footer = () => {
   return (
@@ -12,7 +11,7 @@ const Footer = () => {
           {/* Brand Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6 md:mb-8">
-              <img src={logo} alt="Al Safi Beda Logo" className="h-16 md:h-20 w-auto object-contain drop-shadow-lg" loading="lazy" />
+              <img src="/logo.webp" alt="Al Safi Beda Logo" className="h-16 md:h-20 w-auto object-contain drop-shadow-lg" loading="lazy" />
             </div>
             <p className="text-white/60 text-base md:text-lg leading-relaxed mb-6 md:mb-8">
               Bringing authentic homemade flavors to your table. Prepared with love, extreme hygiene, and tradition.
