@@ -6,7 +6,7 @@ const Reviews = () => {
   const testimonials = [
     { 
       name: "Karthik R.", 
-      location: "Coimbatore", 
+      location: "Mayiladuthurai", 
       text: "Romba nalla irukku. The Maitha Beda reminds me of my paati's cooking. Packaging was also super neat and hygienic.", 
       rating: 5,
       initials: "KR",
@@ -14,7 +14,7 @@ const Reviews = () => {
     },
     { 
       name: "Saranya M.", 
-      location: "Tiruppur", 
+      location: "Sirkazhi", 
       text: "First time ordering from here, exact homemade taste. Sweetness correct ah irukku. Definitely ordering again!", 
       rating: 5,
       initials: "SM",
@@ -22,7 +22,7 @@ const Reviews = () => {
     },
     { 
       name: "Abdul Rahman", 
-      location: "Coimbatore", 
+      location: "Nagapattinam", 
       text: "Clean and hygienic homemade snacks. En kids ku intha gothuma beda romba pudichirukku. Worth the price.", 
       rating: 5,
       initials: "AR",

@@ -10,6 +10,7 @@ Built using React.js + Vite + Tailwind CSS, the website focuses on showcasing au
 - Smooth scrolling animations
 - Green & white homemade food theme
 - Beautiful menu showcase section
+- Dynamic Food Gallery Section
 - WhatsApp direct ordering
 - Mobile-first design
 - Sticky responsive navbar
@@ -59,6 +60,7 @@ tailwind.config.js
 - Hero Section
 - About Section
 - Menu Section
+- Gallery Section
 - Why Choose Us
 - Reviews
 - Contact Section

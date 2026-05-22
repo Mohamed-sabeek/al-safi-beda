@@ -1,19 +1,19 @@
 import { motion } from 'framer-motion';
-import maidaBedaImg from '../assets/maida-beda.webp';
-import godhumaiBedaImg from '../assets/godhumai-beda.webp';
-import parottaImg from '../assets/parotta.webp';
-import eggMurtabakImg from '../assets/egg-murtabak.webp';
-import chickenMurtabakImg from '../assets/chicken-murtabak.webp';
-import muttonMurtabakImg from '../assets/mutton-murtabak.webp';
+import gallery1 from '../assets/gallery1.webp';
+import gallery2 from '../assets/gallery2.webp';
+import gallery3 from '../assets/gallery3.webp';
+import gallery4 from '../assets/gallery4.webp';
+import gallery5 from '../assets/gallery5.webp';
+import gallery6 from '../assets/gallery6.webp';
 
 const Gallery = () => {
   const images = [
-    { src: maidaBedaImg, span: "row-span-2 col-span-2" },
-    { src: godhumaiBedaImg, span: "row-span-1 col-span-1" },
-    { src: parottaImg, span: "row-span-1 col-span-1" },
-    { src: eggMurtabakImg, span: "row-span-1 col-span-2" },
-    { src: chickenMurtabakImg, span: "row-span-2 col-span-1" },
-    { src: muttonMurtabakImg, span: "row-span-1 col-span-1" }
+    { src: gallery1, span: "row-span-2 col-span-2" },
+    { src: gallery2, span: "row-span-1 col-span-1" },
+    { src: gallery3, span: "row-span-1 col-span-1" },
+    { src: gallery4, span: "row-span-1 col-span-2" },
+    { src: gallery5, span: "row-span-2 col-span-1" },
+    { src: gallery6, span: "row-span-1 col-span-1" }
   ];
 
   return (

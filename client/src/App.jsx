@@ -9,6 +9,7 @@ import Hero from './sections/Hero';
 // Lazy load below-the-fold sections for performance
 const About = lazy(() => import('./sections/About'));
 const Menu = lazy(() => import('./sections/Menu'));
+const Gallery = lazy(() => import('./sections/Gallery'));
 const WhyChooseUs = lazy(() => import('./sections/WhyChooseUs'));
 const Reviews = lazy(() => import('./sections/Reviews'));
 const Contact = lazy(() => import('./sections/Contact'));
@@ -28,6 +29,7 @@ function App() {
       <Suspense fallback={<Loading />}>
         <About />
         <Menu />
+        <Gallery />
         <WhyChooseUs />
         <Reviews />
         <Contact />

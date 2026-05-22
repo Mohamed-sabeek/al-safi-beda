@@ -43,3 +43,7 @@ Desktop.ini
 # Testing
 coverage
 .eslintcache
+
+# Antigravity/Gemini
+.gemini
+.antigravityignore

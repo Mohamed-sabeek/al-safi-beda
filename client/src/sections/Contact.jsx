@@ -19,16 +19,16 @@ const Contact = () => {
           <p className="text-gray-500 max-w-2xl mx-auto">Have questions or want to place a custom order? Reach out to us via call or WhatsApp.</p>
         </div>
 
-        <div className="max-w-4xl mx-auto px-4 md:px-0">
-          {/* Left: Contact Info */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="space-y-8 md:space-y-10"
-          >
-            <div className="bg-soft p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] border border-primary/5 space-y-6 md:space-y-8 shadow-lg">
+        <div className="max-w-6xl mx-auto px-4 md:px-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+            {/* Left: Contact Info */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="bg-soft p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] border border-primary/5 space-y-6 md:space-y-8 shadow-lg flex flex-col justify-center"
+            >
               <div className="flex items-center gap-4 md:gap-6 group">
                 <div className="w-12 h-12 md:w-16 md:h-16 bg-primary text-white rounded-xl md:rounded-2xl flex items-center justify-center text-xl md:text-2xl shadow-md lg:group-hover:scale-105 transition-transform">
                   <FaPhoneAlt />
@@ -72,21 +72,27 @@ const Contact = () => {
                   <p className="text-xl md:text-2xl font-bold text-dark">24/7</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            {/* Google Maps Embed - Optimized */}
-            <div className="rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-lg h-56 md:h-64 border-4 md:border-8 border-white bg-gray-100">
+            {/* Right: Google Maps Embed - Optimized */}
+            <motion.div 
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-lg h-64 lg:h-full min-h-[350px] border-4 md:border-8 border-white bg-gray-100"
+            >
               <iframe 
                 title="Location Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125322.44173133188!2d76.88483284000307!3d11.01201452399996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f973901%3A0x2670dd4609727419!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1715512000000!5m2!1sen!2sin" 
+                src="https://maps.google.com/maps?q=10.736343,79.50993&z=17&output=embed" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
                 allowFullScreen="" 
                 loading="lazy"
               ></iframe>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </div>
 
