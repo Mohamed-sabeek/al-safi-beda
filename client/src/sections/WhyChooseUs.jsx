@@ -7,45 +7,27 @@ const WhyChooseUs = () => {
     { 
       icon: <FaHeart />, 
       title: "Homemade Quality", 
-      desc: "Every bite is filled with home-cooked warmth and love.", 
-      color: "from-red-500 to-pink-500",
+      desc: "Cooked with love and traditional warmth.", 
       lightColor: "bg-red-50 text-red-500" 
     },
     { 
       icon: <FaStar />, 
       title: "Traditional Taste", 
       desc: "Authentic recipes preserved through generations.", 
-      color: "from-yellow-500 to-orange-500",
       lightColor: "bg-yellow-50 text-yellow-500" 
     },
     { 
       icon: <FaLeaf />, 
       title: "Fresh Ingredients", 
-      desc: "We use only organic and hand-picked fresh produce.", 
-      color: "from-green-500 to-emerald-500",
+      desc: "Hand-picked organic and fresh produce.", 
       lightColor: "bg-green-50 text-green-500" 
     },
     { 
       icon: <FaShieldAlt />, 
       title: "Hygienic Cooking", 
-      desc: "Utmost cleanliness maintained during every preparation.", 
-      color: "from-blue-500 to-cyan-500",
+      desc: "Utmost cleanliness in every preparation.", 
       lightColor: "bg-blue-50 text-blue-500" 
-    },
-    { 
-      icon: <FaRupeeSign />, 
-      title: "Affordable Pricing", 
-      desc: "Premium quality food at very reasonable prices.", 
-      color: "from-purple-500 to-indigo-500",
-      lightColor: "bg-purple-50 text-purple-500" 
-    },
-    { 
-      icon: <FaClock />, 
-      title: "Fast Service", 
-      desc: "Quick preparation and timely WhatsApp response.", 
-      color: "from-orange-500 to-red-400",
-      lightColor: "bg-orange-50 text-orange-500" 
-    },
+    }
   ];
 
   return (
@@ -62,29 +44,28 @@ const WhyChooseUs = () => {
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-extrabold text-dark mb-6"
+            className="text-3xl md:text-4xl font-extrabold text-dark"
           >
-            Why Choose <span className="text-primary">Our Kitchen?</span>
+            Why <span className="text-primary">Al Safi?</span>
           </motion.h2>
-          <p className="text-gray-500 max-w-2xl mx-auto text-lg">We combine traditional wisdom with modern standards to give you the best homemade experience.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {reasons.map((reason, index) => (
             <motion.div 
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] bg-white border border-gray-100 shadow-lg lg:hover:shadow-xl lg:hover:shadow-primary/5 transition-all duration-300 relative overflow-hidden"
+              className="group p-6 md:p-8 rounded-[1.5rem] bg-white border border-gray-100 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/20 transition-all duration-300 relative overflow-hidden flex flex-col items-center text-center"
             >
-              <div className={`w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mb-6 md:mb-8 transition-transform duration-300 lg:group-hover:scale-105 ${reason.lightColor}`}>
+              <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-xl mb-4 transition-transform duration-300 lg:group-hover:scale-110 ${reason.lightColor}`}>
                 {reason.icon}
               </div>
               
-              <h3 className="text-xl md:text-2xl font-bold text-dark mb-3 md:mb-4 lg:group-hover:text-primary transition-colors">{reason.title}</h3>
-              <p className="text-gray-500 leading-relaxed text-sm md:text-base">{reason.desc}</p>
+              <h3 className="text-lg font-bold text-dark mb-2 lg:group-hover:text-primary transition-colors">{reason.title}</h3>
+              <p className="text-gray-500 text-sm leading-snug">{reason.desc}</p>
             </motion.div>
           ))}
         </div>

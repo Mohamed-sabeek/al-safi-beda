@@ -195,12 +195,6 @@ const Navbar = () => {
                 </div>
               </div>
 
-              {/* Social Media Footer */}
-              <div className="p-8 bg-soft border-t border-gray-100 flex justify-center gap-6">
-                {['Instagram'].map((social) => (
-                  <a key={social} href="#" className="text-xs font-bold text-gray-400 hover:text-primary transition-colors uppercase tracking-widest">{social}</a>
-                ))}
-              </div>
             </motion.div>
           </motion.div>
         )}

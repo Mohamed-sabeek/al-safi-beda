@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaPhoneAlt, FaWhatsapp, FaInstagram, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import { FaPhoneAlt, FaWhatsapp, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 
 const Contact = () => {
 
@@ -53,13 +53,21 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 md:gap-6 group">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-accent text-white rounded-xl md:rounded-2xl flex items-center justify-center text-2xl md:text-3xl shadow-md lg:group-hover:scale-105 transition-transform">
-                  <FaInstagram />
+              <div className="flex items-start gap-4 md:gap-6 group">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-blue-500 text-white rounded-xl md:rounded-2xl flex items-center justify-center text-xl md:text-2xl shadow-md lg:group-hover:scale-105 transition-transform shrink-0">
+                  <FaMapMarkerAlt />
                 </div>
                 <div>
-                  <p className="text-[10px] md:text-xs text-accent font-extrabold uppercase tracking-[0.2em] mb-1">Follow Us</p>
-                  <a href="#" className="text-xl md:text-2xl font-bold text-dark hover:text-primary transition-colors">@alsafibeda_official</a>
+                  <p className="text-[10px] md:text-xs text-blue-500 font-extrabold uppercase tracking-[0.2em] mb-1.5">Delivery Areas</p>
+                  <div className="space-y-1.5">
+                    <p className="text-sm md:text-base font-bold text-dark flex items-center gap-2">
+                      Podakkudi <span className="px-2 py-0.5 bg-green-100 text-green-600 rounded-full text-[10px] uppercase tracking-wider">Free</span>
+                    </p>
+                    <p className="text-xs md:text-sm text-gray-500 font-medium leading-relaxed">
+                      Boodhamangalam, Atthikkadai, Kootthanalloor, Marakadai
+                      <span className="block text-orange-500 text-[10px] uppercase tracking-wider mt-1">*₹20 per kg delivery charge applies</span>
+                    </p>
+                  </div>
                 </div>
               </div>
 

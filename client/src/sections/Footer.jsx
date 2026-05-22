@@ -1,4 +1,4 @@
-import { FaWhatsapp, FaInstagram, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaWhatsapp, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import logo from '../assets/logo.webp';
 
 const Footer = () => {
@@ -18,7 +18,7 @@ const Footer = () => {
               Bringing authentic homemade flavors to your table. Prepared with love, extreme hygiene, and tradition.
             </p>
             <div className="flex gap-4">
-              {[FaInstagram, FaWhatsapp].map((Icon, i) => (
+              {[FaWhatsapp].map((Icon, i) => (
                 <a key={i} href="#" className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-white/5 backdrop-blur-sm flex items-center justify-center border border-white/5 hover:bg-secondary hover:text-primary transition-all duration-300">
                   <Icon size={20} />
                 </a>

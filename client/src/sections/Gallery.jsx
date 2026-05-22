@@ -8,12 +8,12 @@ import gallery6 from '../assets/gallery6.webp';
 
 const Gallery = () => {
   const images = [
-    { src: gallery1, span: "row-span-2 col-span-2" },
-    { src: gallery2, span: "row-span-1 col-span-1" },
-    { src: gallery3, span: "row-span-1 col-span-1" },
-    { src: gallery4, span: "row-span-1 col-span-2" },
-    { src: gallery5, span: "row-span-2 col-span-1" },
-    { src: gallery6, span: "row-span-1 col-span-1" }
+    { src: gallery1, span: "row-span-2 col-span-1", fit: "object-cover" },
+    { src: gallery2, span: "col-span-1 row-span-1", fit: "object-cover" },
+    { src: gallery3, span: "col-span-1 row-span-1", fit: "object-cover" },
+    { src: gallery5, span: "row-span-2 col-span-1", fit: "object-cover" },
+    { src: gallery4, span: "col-span-1 row-span-1", fit: "object-cover" },
+    { src: gallery6, span: "col-span-1 row-span-1", fit: "object-cover" }
   ];
 
   return (
@@ -43,7 +43,7 @@ const Gallery = () => {
               <img 
                 src={img.src} 
                 alt={`Gallery ${index}`} 
-                className="w-full h-full object-cover transition-transform duration-500 lg:group-hover:scale-105"
+                className={`w-full h-full transition-transform duration-500 lg:group-hover:scale-105 ${img.fit}`}
                 loading="lazy"
                 decoding="async"
                 width="400"
