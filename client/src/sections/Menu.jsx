@@ -144,7 +144,7 @@ const Menu = () => {
                 </div>
                 <div className="p-6 md:p-8">
                   <h3 className="text-xl md:text-2xl font-bold text-dark mb-2 group-hover:text-primary transition-colors">{item.name}</h3>
-                  <p className={`text-gray-500 text-sm md:text-base leading-relaxed line-clamp-2 ${item.note ? 'mb-2' : 'mb-6'}`}>{item.description}</p>
+                  <p className={`text-gray-500 text-sm md:text-base leading-relaxed ${item.note ? 'mb-2' : 'mb-6'}`}>{item.description}</p>
                   {item.note && (
                     <p className="text-orange-500 text-[11px] md:text-xs font-bold uppercase tracking-wider mb-4">* {item.note}</p>
                   )}
