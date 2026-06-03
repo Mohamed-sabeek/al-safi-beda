@@ -16,8 +16,7 @@ const menuItems = [
     description: 'Traditional homemade maida beda, soft and layered, prepared with premium quality maida.',
     note: '1kg ≈ 15 pieces',
     image: maidaBedaImg,
-    category: 'Beda',
-    price: '₹180'
+    category: 'Beda'
   },
   {
     id: 2,
@@ -138,9 +137,11 @@ const Menu = () => {
                     width="400"
                     height="300"
                   />
-                  <div className="absolute top-4 right-4 bg-secondary text-primary font-bold px-4 py-1.5 rounded-xl text-lg shadow-md">
-                    {item.price}
-                  </div>
+                  {item.price && (
+                    <div className="absolute top-4 right-4 bg-secondary text-primary font-bold px-4 py-1.5 rounded-xl text-lg shadow-md">
+                      {item.price}
+                    </div>
+                  )}
                 </div>
                 <div className="p-6 md:p-8">
                   <h3 className="text-xl md:text-2xl font-bold text-dark mb-2 group-hover:text-primary transition-colors">{item.name}</h3>
